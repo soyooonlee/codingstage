@@ -1,0 +1,11 @@
+* {
+	background-color: cornsilk;
+}
+
+.outer {
+	background-color: orange;
+	width: 70vw;
+	height: 70vw;
+	margin: 20px;
+	padding: 10px;
+}

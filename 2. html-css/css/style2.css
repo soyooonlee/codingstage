@@ -1,0 +1,20 @@
+* {
+	margin: 30px;
+}
+
+.e1 {
+	background-color: red;
+	display: inline-block;
+}
+
+.e2 {
+	background-color: yellow;
+}
+
+.e3 {
+	background-color: blue;
+}
+
+.e4 {
+	background-color: green;
+}

@@ -1,0 +1,40 @@
+.MyCatinfo {
+	margin: 36px auto;
+	width: 650px;
+	padding: 36px;
+	border-radius: 12px;
+	background-color: #a1d8c6;
+	box-shadow: 3px 3px 15px gray;
+}
+/* 글자가 많아질수록 그림이 width에 맞춰 쪼그라듦. 그림크기를 고정으로 하는 방법 찾아보기 */
+
+.Profilepicture {
+	width: 300px;
+	height: 300px;
+	background-image: url("../img/the_infinite_universe_by_hieronymus_bosch_a7a9af50-b2cb-47aa-9834-139296548e40.png");
+	/* 그림은 AI화가 midjourney의 작품이다. input: the infinity universe by hieronymus bosch */
+	background-position: center;
+	background-size: contain;
+	/* contain: 원본비율. cover는 중앙비율, 빈틈없이 공간을 매울때*/
+	border-radius: 50%;
+}
+
+ul {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	/* 전체 글꼴 변경 */
+}
+
+.c1 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #1b08cc;
+	text-shadow: 1px 1px 15px rgb(64, 156, 156);
+}
+
+.c2 {
+	text-decoration: underline wavy green;
+}
+
+.c3 {
+	text-decoration: underline double #847cc9;
+}
