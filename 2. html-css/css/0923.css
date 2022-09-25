@@ -1,4 +1,4 @@
-.MyCatinfo {
+.Myinfo {
 	margin: 36px auto;
 	width: 650px;
 	padding: 36px;
@@ -20,21 +20,28 @@
 }
 
 ul {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	/* 전체 글꼴 변경 */
+	font-family: "NanumBarunGothic"; /* 전체 글꼴 변경 */
 }
 
+li {
+	list-style: "🌠";
+	line-height: 2em; /* em: 부모태그에 영향을 받는 상대적크기 */
+}
+
+
 .c1 {
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: bold;
+
 	color: #1b08cc;
 	text-shadow: 1px 1px 15px rgb(64, 156, 156);
 }
 
 .c2 {
-	text-decoration: underline wavy green;
+	text-decoration: underline double red; /* 텍스트에 물결 언더바 주기*/
 }
 
 .c3 {
-	text-decoration: underline double #847cc9;
+	text-decoration: underline wavy rgb(167, 125, 42); /* 텍스트에 물결 언더바 주기*/
+	font-weight: bold;
 }
