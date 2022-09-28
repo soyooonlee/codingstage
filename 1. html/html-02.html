@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table 만들기</title>
+</head>
+
+<body>
+    <!-- <표 만들기> -->
+    <!-- 가장 기본 꼴: table > caption, tr > td -->
+    <table>
+        <!-- caption은 표의 제목. 어느위치에 둬도 상관은 없다 -->
+        <caption>1~9까지 숫자들</caption>
+        <!-- tr은 행, td는 그 가로행 안에 있는 데이터들 -->
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+    <!-- 중요::: table > caption, thead > tr > td, tbody > tr> th, td -->
+
+    <hr><br>
+    <table>
+        <caption>웹 프론트엔드 개발 공부 일지</caption>
+        <thead>
+            <!-- thead의 th scope = col은 표의 head방향이 열인지 행인지 잡아준다. 이때 col은 열방향의 데이터들을 말한다 -->
+            <th scope="col">과목</th>
+            <th scope="col">월</th>
+            <th scope="col">화</th>
+            <th scope="col">수</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <!-- tbody의 scope는 thead의 데이터들의 항목에 따라 종속된다. 이때 html&css 공부는 각각 데이터셋이 과목, 월, 화, 수가 열로 늘어져있으므로, 행으로 들어간다. thead의 scope과 tbody의 scope는 반대가 되어야 한다 ??-->
+                <th scope="row">html&css</th>
+                <td>60분</td>
+                <td>40분</td>
+                <td>20분</td>
+            </tr>
+            <tr>
+                <th scope="row">javascript</th>
+                <td>20분</td>
+                <td>10분</td>
+                <td>40분</td>
+            </tr>
+            <tr>
+                <th scope="row">typescript</th>
+                <td>50분</td>
+                <td>100분</td>
+                <td>120분</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+
+
+    <table>
+        <tr>
+            <!-- tr은 행 속성이다. 까먹지 말것 -->
+            <!-- colspan, rowspan은 td에서 사용되어야 한다 -->
+            <td>1</td>
+            <td colspan="2">2</td>
+            <!-- 행을 2개 합한다 -->
+
+            <td>1</td>
+        </tr>
+        <tr>
+            <td rowspan="3">3</td>
+            <!-- 열을 3개 합한다 -->
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+
+            <td>1</td>
+
+            <td colspan="2" rowspan="2">4</td>
+        </tr>
+        <tr>
+
+            <td>1</td>
+
+        </tr>
+    </table>
+
+
+    <table>
+        <colgroup>
+            <col class="weekend">
+            <col span="5">
+            <col class="weekend">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">일</th>
+                <th scope="col">월</th>
+                <th scope="col">화</th>
+                <th scope="col">수</th>
+                <th scope="col">목</th>
+                <th scope="col">금</th>
+                <th scope="col">토</th>
+
+            </tr>
+        </thead>
+    </table>
+
+
+
+</body>
+
+</html>

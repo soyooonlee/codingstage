@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 태그 form과 label</title>
+</head>
+
+<body>
+    <!-- form 태그 사용하기 -->
+    <!-- form > label for & input, button -->
+    <form action="./result.html" method="GET">
+        <!-- **중요** labe name과 input name은 같아야 한다 -->
+        <label for="name">이름</label>
+        <input type="text" id="name" name="ma-name">
+        <br>
+        <label for="age">나이</label>
+        <input type="number" id="age" name="my-age">
+        <br>
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+        <button>그냥</button>
+        <!-- **이 버튼은 왜 action으로 넘어가지? -->
+    </form>
+    <br>
+
+    <form action="#">
+        <!-- 1~10까지 숫자입력 -->
+        <label for="numIp">number</label>
+        <br>
+        <input id="numIp" type="number" min="1" max="10">
+        <br>
+
+        <!-- 1~100까지 range 5단위로 조절 -->
+        <label for="rgIp">range</label>
+        <br>
+        <input id="rgIp" type="range" min="0" max="100" step="5">
+        <br>
+
+        <!-- 연도-월-일 날짜 인풋 -->
+        <label for="dtIp">date</label>
+        <br>
+        <input id="dtIp" type="date" min="2022-01-01" max="2030-12-31">
+    </form>
+    <br>
+
+
+    <form>
+        <!-- 폼 태그 내 입력요소와 라벨들을 그룹화 -->
+        <fieldset>
+            <!-- 필드셋 요소의 제목 or 설명 넣기-->
+            <legend>반장</legend>
+            <label for="name">이름</label>
+            <input id="name" name="반장name" type="text">
+            <br>
+            <label for="age">나이</label>
+            <input id="age" name="반장age" type="number">
+        </fieldset>
+        <br>
+
+        <!-- disabled는 그 폼 서식을 변경할 수 없도록 하는 것. 회색깔의 네모가 생성됨 -->
+        <fieldset form="서기form" disabled>
+            <legend>서기</legend>
+            <input id="name_서기" name="name_서기 type=" text">
+
+        </fieldset>
+    </form>
+
+    <form action="#">
+        <label for="IDIp">ID</label>
+    </form>
+
+
+</body>
+
+</html>
