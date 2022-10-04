@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Song+Myung&display=swap");
+
+.Myinfo {
+	display: flex; /* 가로설정 */
+	margin: 36px auto;
+	width: 600px;
+	padding: 36px;
+	border-radius: 12px;
+	background-color: #a1d8c6;
+	box-shadow: 5px 5px 15px gray; /* 순서대로 x축, y축 방향으로 15px의 그림자를 줌 */
+}
+
+/* 글자가 많아질수록 그림이 width에 맞춰 쪼그라듦. 그림크기를 고정으로 하는 방법은? -> flex-shrink*/
+
+.Profilepicture {
+	width: 300px;
+	height: 300px;
+	background-image: url("../img/the_infinite_universe_by_hieronymus_bosch_a7a9af50-b2cb-47aa-9834-139296548e40.png");
+	/* background-image: url(https://cdn.pixabay.com/photo/2022/08/26/13/15/man-7412527_960_720.png); */
+	/* 그림은 AI화가 midjourney의 작품이다. input: the infinity universe by hieronymus bosch */
+	background-position: center; /* 그림 가운데 정렬 */
+	background-size: contain; /* contain: 원본비율. cover는 중앙비율, 빈틈없이 공간을 매울때*/
+	border-radius: 50%; /* 모서리를 둥글게*/
+	flex-shrink: 0; /* 중요: 전체공간이 부족할 때, 해당 아이템의 길이가 지정된 값보다 작아질수 있을지 지정. 0은 크기변형X*/
+}
+
+ul {
+	font-family: "Song Myung", serif;
+	/* font-family: "NanumBarunGothic";  */
+	/*전체 글꼴 변경*/
+}
+
+li {
+	list-style: "🌠";
+	line-height: 2em; /* em: 부모태그에 영향을 받는 상대적크기 */
+}
+
+.c1 {
+	font-size: 25px;
+	font-weight: bold;
+
+	color: #1b08cc;
+	text-shadow: 1px 1px 15px rgb(64, 156, 156);
+}
+
+.c2 {
+	text-decoration: underline double red; /* 텍스트에 물결 언더바 주기*/
+}
+
+.c3 {
+	text-decoration: underline wavy rgb(167, 125, 42); /* 텍스트에 물결 언더바 주기*/
+	font-weight: bold;
+}
