@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400");
+
+/* 스크롤바 변경 */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #eeeeee;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(black blue);
+	border-radius: 5px;
+}
+
+body {
+	font-family: Nanum Gothic;
+	line-height: 4rem;
+	background-color: rgb(205, 238, 220);
+	padding: 4% 8%;
+	/* 화면 유동성 */
+	display: flex;
+	flex-direction: column;
+}
+
+/* nav */
+
+.navigator {
+	display: flex;
+	flex-direction: row;
+	/* 스크롤해도 내려가지않도록 붙이기 fixed*/
+	position: sticky;
+	padding-top: 30px;
+	top: -30px;
+	justify-content: space-between;
+}
+
+/* A > B 상위호환 why */
+.navigator > h3 {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 30px;
+	/* 900 = bold */
+	font-weight: 900;
+	color: black;
+}
+
+li {
+	display: inline;
+	margin-left: 20px;
+}
+
+ul {
+	padding: 10px;
+}
+
+a {
+	all: unset;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+a:hover {
+	color: lightgrey;
+	/* font-weight: 900; */
+	transition: 0.3s;
+}
+
+/* main - intro*/
+
+.intro {
+	font-size: 30px;
+	margin-top: 100px;
+	margin-bottom: 250px;
+}
+
+.intro_h {
+	line-height: 5rem;
+}
+
+.highlight {
+	display: inline-block;
+	position: relative;
+}
+
+.highlight:after {
+	content: "";
+	width: 0;
+	height: 75px;
+	display: inline-block;
+	background-color: rgb(78, 78, 78);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	transition: 0.2s all;
+	opacity: 0.9;
+}
+
+.highlight:hover:after {
+	width: 100%;
+}
+
+.highlight:hover {
+	color: white;
+}
+
+/* main - info */
+
+.info {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 10%;
+	margin-bottom: 200px;
+	font-size: 1.5em;
+}
+
+/* main - work */
+
+img {
+	width: 13%;
+	margin-top: 50px;
+}
+
+.skill {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	margin-top: 200px;
+}
+/* transition -마우스 올렸을때 색상변경,  */
+/* align items: center; 주면 가운데로 온다 */
