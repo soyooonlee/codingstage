@@ -1,0 +1,43 @@
+body {
+    padding: 24px;
+}
+
+section {
+    padding: 16px;
+    background-color: lightgray;
+    margin: 1em;
+    padding: 1em;
+}
+
+.blue, .red {
+    height: 200px; line-height: 200px;
+    font-size: 1.4em;
+    text-align: center;
+    color: white;
+    /* display inline-block 방식은 박스 사이에 빈 공간이 생기기 때문에 한계가 있다. 때문에 float을 사용 */
+    display: inline-block;
+  }
+
+.blue {
+    float: left;
+    width: 200px;
+    background-color: slateblue;
+}
+
+.red {
+ float: left;
+ /* 100%에서 blue의 200px를 뺀 너비 */
+ width: calc(100% - 200px); 
+ background-color: tomato;
+}
+
+
+/* .empty {
+    clear: both;
+} */
+
+/* section::after {
+    content: "";
+    display: block;
+    clear: both;
+} */

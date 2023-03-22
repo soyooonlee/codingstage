@@ -1,0 +1,53 @@
+@keyframes roll-and-round {
+    /* 시작 */
+    from {
+      left: 36px;
+      border-radius: 0;
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  
+        /* 중간과정 추가 */
+    30% {
+    transform: scale(2) rotate(540deg);
+    border-radius: 10%;
+    opacity: 1;
+    }  
+
+    /* 끝 */
+    to {
+      left: 600px;
+      border-radius: 100%;
+      transform: scale(0.25) rotate(1080deg) ;
+      opacity: 0;
+      
+    }
+
+}
+  
+
+
+  /* 요소에 애니메이션을 적용 */
+#square {
+    /* 사용할 애니메이션의 이름 */
+    animation-name: roll-and-round;
+  
+    /* 지속시간 */
+    animation-duration: 2s;
+  
+    /* 시간함수 */
+    animation-timing-function: linear;
+    /* animation-timing-function: ease-in-out; */
+  
+    /* 지연시간 -몇 초후 시작할 것인가*/
+    animation-delay: 1s;
+  
+    /* 반복 횟수 -몇번 반복할 것인가*/
+    animation-iteration-count: 3;
+    /* animation-iteration-count: infinite; */
+  
+    /* 진행방향 -거꾸로*/
+    /* animation-direction: reverse; */
+    /* 왔다갔다 */
+    animation-direction: alternate;
+  }

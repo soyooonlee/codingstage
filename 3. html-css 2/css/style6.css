@@ -1,0 +1,83 @@
+body {
+	margin: 36px;
+}
+
+button {
+	/* 버튼모양 빼기 */
+	all: unset;
+	margin-bottom: 2em;
+	padding: 0.2em;
+	height: 64px;
+	font-size: 1.2em;
+	color: white;
+	background-color: tomato;
+	border-radius: 8px;
+	/* 커서 올렸을때 클릭가능 표시 뜨게하기 */
+	cursor: pointer;
+}
+
+/* 그냥 팁: class, id 명을 지정할때 첫글자가 숫자면 안된다 */
+._1:hover {
+	background-color: darkorchid;
+	border-radius: 32px;
+}
+._1 {
+	/* 속도를 부드럽게 조절 */
+	transition: all 500ms;
+}
+._2:hover {
+	animation: button-hover 200ms;
+}
+
+@keyframes button-hover {
+	from {
+		transform: scale(100%);
+	}
+	50% {
+		transform: scale(105%);
+	}
+	to {
+		transform: scale(100%);
+	}
+}
+
+#loading {
+	position: relative;
+	width: 600px;
+	height: 40px;
+	background-color: lightblue;
+	border-radius: 20px;
+	cursor: pointer;
+	/* 도형을 넘어가는건 숨기기 */
+	overflow: hidden;
+}
+#loading > div {
+	display: flex;
+	width: 200%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#loading > div {
+	transform: skewX(-24deg);
+	animation-name: move-right;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+#loading > div > div {
+	flex-grow: 1;
+}
+#loading > div > div:nth-child(odd) {
+	background-color: dodgerblue;
+}
+
+@keyframes move-right {
+	from {
+		left: -600px;
+	}
+	to {
+		left: 0;
+	}
+}

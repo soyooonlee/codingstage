@@ -1,0 +1,46 @@
+table {
+    border-collapse: collapse;
+    /* border-collapse: separate; ------거의 사용하지 않음*/
+
+    /* border-collapse가 collapse면 th, td의 border에 묻힘 */
+    border: 1px solid black;
+
+    /* border-collapse가 separate 일때 */
+    /* border-spacing: 0.5em; */
+
+    /* 테이블 캡션의 위치 지정 */
+    caption-side: top;
+    /* caption-side: bottom; */
+
+    /* 레이아웃 너비 자동 or 고정 */
+    /* table-layout: auto; */
+    table-layout: fixed;
+
+    /* height: 200px; */
+
+}
+
+
+th, td {
+    /* 테두리 */
+    border: 1px solid gray
+}
+
+/* td {
+    테이블 셀 안의 텍스트 세로배치
+    vertical-align: bottom;
+} */
+
+
+/* col 개별 너비 조정 */
+colgroup col:nth-child(1) {
+    width: 100px;
+}
+
+colgroup col:nth-child(2) {
+    width: 150px;
+}
+
+colgroup col:nth-child(3) {
+    width: 100px;
+}
